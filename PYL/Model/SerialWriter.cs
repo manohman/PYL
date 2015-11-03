@@ -13,7 +13,7 @@ namespace PYL.Model
 
         public SerialWriter()
         {
-            _serialPort.PortName = "COM2";
+            _serialPort.PortName = "COM1";
             _serialPort.BaudRate = 9600;
             _serialPort.Handshake = System.IO.Ports.Handshake.None;
             _serialPort.Parity = Parity.None;
