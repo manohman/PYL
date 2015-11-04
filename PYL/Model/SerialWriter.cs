@@ -7,13 +7,10 @@ using System.IO.Ports;
 
 namespace PYL.Model {
     public class SerialWriter : ISerialWriter, IDisposable {
-        SerialPort _serialPort = new System.IO.Ports.SerialPort();
+        SerialPort _serialPort;
 
         public SerialWriter() {
-
-
-
-
+           
         }
 
 
@@ -24,6 +21,7 @@ namespace PYL.Model {
 
 
         public void SetComPort(string comPort) {
+            _serialPort = new System.IO.Ports.SerialPort();
             _serialPort.PortName = comPort;
             _serialPort.BaudRate = 9600;
             _serialPort.Handshake = System.IO.Ports.Handshake.None;

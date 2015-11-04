@@ -28,13 +28,13 @@ namespace PYL.Model {
             var result = JsonConvert.DeserializeObject<dynamic>(configString);
 
 
-            List<ISquare> squares3 = new List<ISquare>();
+            List<ISquare> squares = new List<ISquare>();
             foreach (var square in result.Squares) {
-                squares3.Add(new Square((int)square.ScoreAdjust, (int)square.TurnAdjust, (int)square.WhammyAdjust));
+                squares.Add(new Square((int)square.ScoreAdjust, (int)square.TurnAdjust, (int)square.WhammyAdjust));
             }
             string com = result.ComPort;
 
-            _configSetting = new ConfigSetting(squares3, com);
+            _configSetting = new ConfigSetting(squares, com);
 
         }
 

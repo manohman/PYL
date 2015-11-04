@@ -67,19 +67,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-
-                        
                         <TextBlock Text="Name: " />
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" />
                         <TextBlock Text=", " />
                         <TextBlock Text="Score: " />
                         <TextBlock Text="{Binding Score}" FontWeight="Bold" />
                         <TextBlock Text=" (Turns: " />
-                        <TextBlock Text="{Binding TurnsLeft }" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                        <TextBlock Text="{Binding TurnsLeft }" Foreground="Blue" />
                         <TextBlock Text=")" />
                         <TextBlock Text="Whammy: " />
                         <TextBlock Text="{Binding Whammies}" FontWeight="Bold" />
-
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

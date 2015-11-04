@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using GalaSoft.MvvmLight;
 
-namespace PYL.Model
-{
-    public class Player : ObservableObject
-    {
+namespace PYL.Model {
+    public class Player : ObservableObject {
 
         private string _name;
         private int _score;
@@ -19,8 +17,7 @@ namespace PYL.Model
         private int _whammies;
         private Key _commandKey;
 
-        public Player(string name, Key commandKey)
-        {
+        public Player(string name, Key commandKey) {
             _name = name;
             _commandKey = commandKey;
             _turnsLeft = 5;
@@ -28,65 +25,53 @@ namespace PYL.Model
             _score = 0;
         }
 
-        public string Name
-        {
+        public string Name {
             get { return _name; }
             set { Set<string>(() => this.Name, ref _name, value); }
         }
 
-        public int Score
-        {
+        public int Score {
             get { return _score; }
             set { Set<int>(() => this.Score, ref _score, value); }
         }
 
-        public int TurnsLeft
-        {
+        public int TurnsLeft {
             get { return _turnsLeft; }
-            set
-            {
+            set {
                 var changed = Set<int>(() => this.TurnsLeft, ref _turnsLeft, value);
-                if (changed)
-                {
+                if (changed) {
                     RaisePropertyChanged(propertyName: "IsActive");
                 }
 
             }
         }
 
-        public int Whammies
-        {
+        public int Whammies {
             get { return _whammies; }
-            set
-            {
+            set {
                 bool changed = Set<int>(() => this.Whammies, ref _whammies, value);
-                if (changed)
-                {
+                if (changed) {
                     RaisePropertyChanged("IsActive");
                 }
             }
 
         }
 
-        public Key CommandKey
-        {
+        public Key CommandKey {
             get { return _commandKey; }
             set { Set<Key>(() => this.CommandKey, ref _commandKey, value); }
         }
 
-        public bool IsActive
-        {
+        public bool IsActive {
             get { return TurnsLeft > 0 && Whammies < 4; }
         }
 
-        public void Reset()
-        {
+        public void Reset() {
             Initialize();
 
         }
 
-        private void Initialize()
-        {
+        private void Initialize() {
             TurnsLeft = 5;
             Score = 0;
             Whammies = 0;
