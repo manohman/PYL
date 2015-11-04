@@ -31,10 +31,21 @@
 
             player.Whammies += _whammyAdjust;
         }
+
+
+        public int ScoreAdjust { get { return _scoreAdjust; }  }
+        public int TurnAdjust { get { return _turnAdjust; }  }
+        public int WhammyAdjust { get { return _whammyAdjust; } }
+
+
     }
 
     public interface ISquare
     {
         void Adjust(Player player);
+
+        int ScoreAdjust { get;  }
+        int TurnAdjust { get;  }
+        int WhammyAdjust { get; }
     }
 }

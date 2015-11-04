@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +39,11 @@ namespace PYL.Model
             _squares.Add(new Square(300, -1, 0));
             _squares.Add(new Square(400, -1, 0));
             _squares.Add(new Square(00, -1, 1));
+
+
+            File.WriteAllText(@"c:\json.txt", JsonConvert.SerializeObject(_squares, Formatting.Indented));
+
+
 
 
         }
