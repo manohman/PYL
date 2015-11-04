@@ -30,18 +30,18 @@ namespace PYL.Model
             _selectionTimer.Start();
             _squares = new List<ISquare>();
 
-            _squares.Add(new Square(500, -1, 0));
-            _squares.Add(new Square(0, 3, 0));
-            _squares.Add(new Square(250, -1, 0));
-            _squares.Add(new Square(1000, -1, 0));
-            _squares.Add(new Square(10, -1, 1));
-            _squares.Add(new Square(100, -1, 0));
-            _squares.Add(new Square(300, -1, 0));
-            _squares.Add(new Square(400, -1, 0));
-            _squares.Add(new Square(00, -1, 1));
+            //_squares.Add(new Square(500, -1, 0));
+            //_squares.Add(new Square(0, 3, 0));
+            //_squares.Add(new Square(250, -1, 0));
+            //_squares.Add(new Square(1000, -1, 0));
+            //_squares.Add(new Square(10, -1, 1));
+            //_squares.Add(new Square(100, -1, 0));
+            //_squares.Add(new Square(300, -1, 0));
+            //_squares.Add(new Square(400, -1, 0));
+            //_squares.Add(new Square(00, -1, 1));
 
 
-            File.WriteAllText(@"c:\json.txt", JsonConvert.SerializeObject(_squares, Formatting.Indented));
+            //File.WriteAllText(@"c:\json.txt", JsonConvert.SerializeObject(_squares, Formatting.Indented));
 
 
 

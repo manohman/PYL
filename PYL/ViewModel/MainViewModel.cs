@@ -15,16 +15,18 @@ namespace PYL.ViewModel
 
         private Player _currentPlayer;
         private ObservableCollection<Player> _players;
+        private IConfigParser _configParser;
 
         public RelayCommand SelectSquareCommand { get; private set; }
         public RelayCommand StartNewGameCommand { get; private set; }
         /// <summary>
         ///     Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel(IDataService dataService, ISquareSelectorService squareSelectorService)
+        public MainViewModel(IDataService dataService, ISquareSelectorService squareSelectorService, IConfigParser configParser)
         {
             _dataService = dataService;
             _squareSelectorService = squareSelectorService;
+            _configParser = configParser;
             this.SelectSquareCommand = new RelayCommand(this.SelectSquare);
             this.StartNewGameCommand = new RelayCommand(this.StartNewGame);
 

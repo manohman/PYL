@@ -13,16 +13,16 @@ namespace PYL.Model
 
         public SerialWriter()
         {
-            _serialPort.PortName = "COM1";
-            _serialPort.BaudRate = 9600;
-            _serialPort.Handshake = System.IO.Ports.Handshake.None;
-            _serialPort.Parity = Parity.None;
-            _serialPort.DataBits = 8;
-            _serialPort.StopBits = StopBits.One;
-            _serialPort.ReadTimeout = 2000;
-            _serialPort.WriteTimeout = 50;
+            //_serialPort.PortName = "COM1";
+            //_serialPort.BaudRate = 9600;
+            //_serialPort.Handshake = System.IO.Ports.Handshake.None;
+            //_serialPort.Parity = Parity.None;
+            //_serialPort.DataBits = 8;
+            //_serialPort.StopBits = StopBits.One;
+            //_serialPort.ReadTimeout = 2000;
+            //_serialPort.WriteTimeout = 50;
 
-            _serialPort.Open();
+            //_serialPort.Open();
 
 
 
@@ -31,7 +31,7 @@ namespace PYL.Model
 
         public void WriteIndex(int currentSquareIndex)
         {
-            _serialPort.WriteLine(currentSquareIndex.ToString());
+            //_serialPort.WriteLine(currentSquareIndex.ToString());
 
         }
 

@@ -16,6 +16,7 @@ namespace PYL
 
             SimpleIoc.Default.Register<ISquareSelectorService, SquareSelectorService>();
             SimpleIoc.Default.Register<ISerialWriter, SerialWriter>();
+            SimpleIoc.Default.Register<IConfigParser, ConfigParser>();
 
         }
     }

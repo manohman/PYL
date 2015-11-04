@@ -86,6 +86,8 @@
     <Compile Include="Model\SerialWriter.cs" />
     <Compile Include="Model\Square.cs" />
     <Compile Include="Model\SquareSelectorService.cs" />
+    <Compile Include="Model\ConfigParser.cs" />
+    <Compile Include="Model\ConfigSetting.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
