@@ -21,7 +21,7 @@ namespace PYL.Model
         private IList<ISquare> _squares;
 
 
-        public SquareSelectorService(ISerialWriter serialWriter)
+        public SquareSelectorService(ISerialWriter serialWriter, IConfigParser configParser)
         {
             SerialWriter = serialWriter;
             _random = new Random();
@@ -29,6 +29,9 @@ namespace PYL.Model
             _selectionTimer.Elapsed += SelectionTimerOnElapsed;
             _selectionTimer.Start();
             _squares = new List<ISquare>();
+
+            _squares = configParser.ConfigSetting.Squares;
+            SerialWriter.SetComPort(configParser.ConfigSetting.ComPort);
 
             //_squares.Add(new Square(500, -1, 0));
             //_squares.Add(new Square(0, 3, 0));

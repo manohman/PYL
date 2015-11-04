@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace PYL.Model {
 
     public class ConfigSetting {
-        private IList<Square> _squares;
+        private IList<ISquare> _squares;
         private string _comPort;
+        private List<ISquare> squares3;
+        private string com;
 
         public ConfigSetting() {
 
-            _squares = new List<Square>();
+            //_squares = new List<Square>();
 
             //_squares.Add(new Square(500, -1, 0));
             //_squares.Add(new Square(0, 3, 0));
@@ -28,9 +30,14 @@ namespace PYL.Model {
 
         }
 
+        public ConfigSetting(List<ISquare> squares, string com) {
+            _squares = squares;
+            _comPort = com;
+        }
+
         public string ComPort { get { return _comPort; } }
 
-        public IList<Square> Squares {
+        public IList<ISquare> Squares {
             get { return _squares; }
         }
 
