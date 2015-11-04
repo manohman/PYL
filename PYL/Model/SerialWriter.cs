@@ -25,7 +25,7 @@ namespace PYL.Model
             _serialPort.Open();
 
 
-            
+
         }
 
 
@@ -44,7 +44,7 @@ namespace PYL.Model
             {
                 if (disposing)
                 {
-                    
+
                     _serialPort.Dispose();
                     _serialPort = null;
                     // TODO: dispose managed state (managed objects).
@@ -74,7 +74,8 @@ namespace PYL.Model
         #endregion
     }
 
-    public interface ISerialWriter {
+    public interface ISerialWriter
+    {
         void WriteIndex(int currentSquareIndex);
     }
 }

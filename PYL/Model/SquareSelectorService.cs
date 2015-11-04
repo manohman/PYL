@@ -18,7 +18,7 @@ namespace PYL.Model
         private Timer _selectionTimer;
         private Random _random;
         private int _currentSquareIndex;
-        private IList<ISquare> _squares; 
+        private IList<ISquare> _squares;
 
 
         public SquareSelectorService(ISerialWriter serialWriter)
@@ -67,7 +67,7 @@ namespace PYL.Model
 
             _squares[_currentSquareIndex].Adjust(currentPlayer);
 
-            
+
 
             _selectionTimer.Start();
         }
